@@ -33,7 +33,7 @@ app.use(bodyParser.json());
     }
     app.get('/Meteo', async(req, res) => {
             const jsonToSend = []
-            var arrayCittà=[41.9027835, 12.4963655,45.070312,7.6868565,45.4654219,9.1859243,38.1156879,13.3612671,44.494887,11.3426163]
+            const arrayCittà=[41.9027835, 12.4963655,45.070312,7.6868565,45.4654219,9.1859243,38.1156879,13.3612671,44.494887,11.3426163]
             
             const jsonData = await caricaDati(arrayCittà)
 
@@ -56,7 +56,7 @@ app.use(bodyParser.json());
 
     const port = 3000
     app.listen(port, () => {
-        console.log(`Server running at /`+ port);
+        console.log(`Server running at `+ port+'/Meteo');
     });
 
 
